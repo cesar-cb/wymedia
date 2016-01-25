@@ -1,0 +1,21 @@
+{
+  "name": "WikiMedia",
+  "authors": [
+    "Cesar C. Boaventura <cesar.boaventura61@mail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lity": "~1.6.0"
+  }
+}
