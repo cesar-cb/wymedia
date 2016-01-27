@@ -44,12 +44,25 @@ img {
   width: calc(61.8% - 20px);
   margin-right: 20px;
 }
-
+@media (max-width: 745px) {
+  .two-third {
+    width: 100%;
+    margin: 0;
+    float: none;
+  }
+}
 
 .one-third {
   float: left;
   width: calc(38.2% - 20px);
   margin-left: 20px;
+}
+@media (max-width: 745px) {
+  .one-third {
+    width: 100%;
+    margin: 0;
+    float: none;
+  }
 }
 
 
@@ -137,12 +150,13 @@ nav.main-nav a:hover {
   .main-nav {
     width: 100%;
     text-align: center;
-    background: rgb(39, 174, 96);
-    max-height: 0;
+    background-color: white;
+    height: 0;
     overflow: hidden;
     transition: all 1s ease-in-out;
     padding: 0;
     margin: 0;
+    color: black;
   }
 
   .main-header {
@@ -152,9 +166,10 @@ nav.main-nav a:hover {
   .toggle {
     display: block;
     font-size: 2em;
-    color: #252525;
+    color: inherit;
     float: right;
     margin-top: 8px;
+    cursor: pointer;
   }
 
   .main-nav ul {
@@ -163,9 +178,8 @@ nav.main-nav a:hover {
     margin: 0 !important;
   }
 
-  .open {
-    max-height: 100% !important;
-
+  .main-nav.open {
+    height: 100%; !important;
   }
 
   .main-nav li {
@@ -189,6 +203,19 @@ nav.main-nav a:hover {
   width: auto;
   
 }
+@media (max-width: 560px) {
+  .video {
+    display: none;
+  }
+  .overlay {
+    display: none;
+  }
+  section.hero {
+    background:url('https://pixabay.com/get/e133b5062dfc1c22d9584518a33219c8b66ae3d11cb219489df0c778/drink-864958_1920.jpg');
+    background-size: cover;
+    width: 100%;
+  }
+}
 
 .overlay {
   position: absolute;
@@ -201,12 +228,22 @@ nav.main-nav a:hover {
 }
 
 section.hero {
-  padding-top: 300px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
   padding-bottom: 0;
   color: #fff;
   text-align: center;
   overflow: hidden;
   min-height: 100vh;
+}
+.hero-content {
+  margin-top: 10%;
 }
 .hero-title {
   margin: 0;
@@ -246,6 +283,8 @@ section.hero {
 .btn-hero {
   background: none;
   border: none;
+  display: inline-block;
+  margin-bottom: 10%;
   background: #27ae60;
   padding: 20px 70px;
   font-size: 1.2em;
@@ -343,6 +382,12 @@ section.hero {
   margin-top: 30px;
   background-color: #F0F0F0;
   color: #666;
+}
+
+@media (max-width: 745px) {
+  #contact {
+    width: 100%;
+  }
 }
 
 .contact-title {
